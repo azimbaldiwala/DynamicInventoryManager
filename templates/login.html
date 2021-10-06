@@ -1,0 +1,49 @@
+
+
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+
+    <body>
+        <form method="POST" action="/check_login">
+
+            <center>
+
+                
+                <table style="margin-top: 12cm;">
+                    
+                    <tr>
+                        
+                        <th>Username: </th>
+                        <th><input type="text" name="username" id="username">  </th>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <th>Password: </th>
+                        <th><input type="password" name="password" id="password">  </th>
+    
+                    </tr>
+    
+                    <tr>
+                        <th><input type="submit">  </th>
+    
+                    </tr>
+
+                    <tr>
+                        <th> {{ error }} </th>
+    
+                    </tr>
+    
+    
+    
+                </table>
+
+            </center>
+            
+        </form>
+    </body>
+
+</html>

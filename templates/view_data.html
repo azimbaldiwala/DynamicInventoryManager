@@ -1,0 +1,59 @@
+{% extends 'home.html' %}
+{% block body %}
+
+
+    <table class="table">
+        <tr class="table__header">
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Inventory</th>
+            <th>Product Category</th>
+            <th>Product Sub Category</th>
+            <th>Updated At</th>
+            <th>Operations</th>
+        </tr>
+
+        {% for row in data %}
+        <tr class="table__row">
+            {% for cell in row %}
+            <td class="table__cell">{{ cell }}</td>
+            {% endfor %}
+            <td><a href="/edit/{{ row[0] }}">edit</a>  <a href="/delete/{{ row[0] }}">delete</a>  </td>
+        </tr>
+        {% endfor %}
+
+
+
+    </table>
+
+
+    <style>
+
+        .table {
+            border-spacing: 0;
+            margin: 1rem;
+            background-color: #f5f5f5;
+        }
+
+        .table__row:nth-child(even) {
+
+            background-color: #e5e5e5;
+        }
+
+        
+        .table__header {
+            text-align: left;
+        }
+
+        .table__cell {
+            padding: 8px;
+        }
+
+    
+    </style>
+
+
+
+
+{% endblock %}

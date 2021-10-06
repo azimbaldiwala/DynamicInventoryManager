@@ -1,0 +1,89 @@
+{% extends 'home.html' %}
+{% block body %}
+
+
+    <form action="/view_filtered_data" method="POST">
+        
+
+    <table class="table">
+        <tr class="table__row">
+            <th>
+                Select Category
+            </th>
+
+            <th>
+                <select name="category" id="category">
+
+                    {% for x in data %}
+                    
+                        <option value="{{ x[0] }}">{{ x[0] }}</option>
+                
+                    {% endfor %}
+                
+                    </select>
+            </th>
+            
+        </tr>
+
+
+
+        <tr class="table__row">
+            <th>
+                Select Sub Category
+            </th>
+
+            <th>
+                <select name="sub_category" id="sub_category">
+                    
+                    <option value="all">all</option>
+                    {% for x in data1 %}
+                    
+                        <option value="{{ x[0] }}">{{ x[0] }}</option>
+                
+                    {% endfor %}
+                
+                    </select>
+            </th>
+            
+        </tr>
+
+        <tr class="table__row">
+            <th>
+
+                <input type="submit">
+            </th>
+        </tr>
+
+    </table>
+
+    </form>
+
+    
+    <style>
+
+        .table {
+            border-spacing: 0;
+            margin: 1rem;
+            background-color: #f5f5f5;
+        }
+
+        .table__row:nth-child(even) {
+
+            background-color: #e5e5e5;
+        }
+
+        
+        .table__header {
+            text-align: left;
+        }
+
+        .table__cell {
+            padding: 8px;
+        }
+
+    
+    </style>
+
+
+    
+{% endblock %}

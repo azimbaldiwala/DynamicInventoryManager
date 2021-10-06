@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+{% block body %}
+
+    <form action="/edit_data" method="POST">
+        <table>
+            
+            <tr>
+                <th>
+                    Inventory: 
+                </th>
+
+                <th>
+                    <input type="number" name="new_inventory">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    Add<input type="radio" value="add" name="rd_btn_opr">
+                </th>
+
+                <th>
+                    Sub<input type="radio" value="sub" name="rd_btn_opr">
+
+                </th>
+            </tr>
+
+
+            <input type="hidden" value="{{ id }}" name="id">
+
+            <tr>
+                <th><input type="submit" ></th>
+            </tr>
+
+        </table>
+    </form>
+
+{% endblock %}

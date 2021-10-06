@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+{% block body %}
+
+<form method="POST" action="/add_product_data">
+    <center>
+    
+        <table style="margin-top:9cm;">
+
+            <tr>
+                <th>Product Name: </th>
+                <th><input type="text" name="product_name"></th>
+            </tr>
+
+            <tr>
+                <th>Quantity: </th>
+                <th><input type="text" name="quantity"></th>
+            </tr>
+
+            <tr>
+                <th>Inventory: </th>
+                <th><input type="number" name="inventory"></th>
+            </tr>
+
+            
+            <tr>
+                <th>Product category: </th>
+                <th><input type="text" name="p_cat"></th>
+            </tr>
+            
+            <tr>
+                <th>Product Sub category: </th>
+                <th><input type="text" name="p_sub_cat"></th>
+            </tr>
+            
+            <tr>
+                <th><input type="submit"></th>
+            </tr>
+        
+    
+        </table>
+
+
+    </center>
+</form>
+
+{% endblock %}
